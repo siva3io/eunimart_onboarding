@@ -1,0 +1,58 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="onboarding.list">
+      <field name="name">Onboarding Questions</field>
+      <field name="model">onboarding.questions</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="question"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="onboarding.action_window">
+      <field name="name">onboarding questions</field>
+      <field name="res_model">onboarding.questions</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+-->
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="onboarding.action_server">
+      <field name="name">onboarding server</field>
+      <field name="model_id" ref="model_onboarding_onboarding"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="onboarding" id="onboarding.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="onboarding.menu_1" parent="onboarding.menu_root"/>
+    <menuitem name="Menu 2" id="onboarding.menu_2" parent="onboarding.menu_root"/>
+-->
+    <!-- actions -->
+<!--  
+    <menuitem name="Questions" id="onboarding.menu_list" parent="onboarding.menu_root"
+              action="onboarding.action_window"/>
+  <menuitem name="Server to list" id="onboarding" parent="onboarding.menu_2"
+              action="onboarding.action_server"/>
+-->
+  </data>
+</odoo>
